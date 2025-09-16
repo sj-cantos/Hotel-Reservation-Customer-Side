@@ -9,14 +9,14 @@ const USD = new Intl.NumberFormat('en-US', {
   currency: 'USD',
   minimumFractionDigits: 0,
 });
-
+  const API_URL = process.env.API_URL;
 export default function RoomCollection({ guests, roomTypes, setRoomTypes, setSelectedRoom }) {
   const [textFilter, setTextFilter] = React.useState('');
   const [reloadMsg, setReloadMsg] = React.useState('Failed to load rooms');
 
   const reloadRooms = () => {
     setReloadMsg('Reloading rooms, please wait...');
-    fetch('http://localhost:5000/api/rooms', {
+    fetch(`${API_URL}/api/rooms`, {
       headers: {
         Accept: 'application/json',
       },

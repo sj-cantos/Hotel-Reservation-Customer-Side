@@ -19,12 +19,12 @@ try {
   console.log('Hero video not found, using fallback image');
   heroVideo = null;
 }
-
+const API_URL = process.env.API_URL;
 export default function Home({ roomTypes, setRoomTypes }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   React.useEffect(() => {
-    fetch('http://localhost:5000/api/rooms', {
+    fetch(`${API_URL}/api/rooms`, {
       headers: {
         Accept: 'application/json',
       },

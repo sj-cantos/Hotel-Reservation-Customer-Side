@@ -1,6 +1,5 @@
 import React from 'react';
 import SuccessModal from './SuccessModal';
-
 import '../assets/Form.css';
 
 export default function Form({ arriveDate, departDate, guests, selectedRoom, total, name, setName, email, setEmail }) {
@@ -45,7 +44,7 @@ export default function Form({ arriveDate, departDate, guests, selectedRoom, tot
     
     return errors;
   };
-
+  const API_URL = process.env.API_URL;
   // Enhanced form submission
   const submitBookingForm = e => {
     e.preventDefault();
@@ -64,7 +63,7 @@ export default function Form({ arriveDate, departDate, guests, selectedRoom, tot
     
     setShowSuccessModal(true);
 
-    fetch('/api/book/submit', {
+    fetch(`${API_URL}/api/book/submit`, {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
