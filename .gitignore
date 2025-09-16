@@ -10,6 +10,7 @@ yarn-error.log*
 # react
 my-react-app/coverage
 my-react-app/build
+my-react-app/.env
 
 # server
 server/coverage
