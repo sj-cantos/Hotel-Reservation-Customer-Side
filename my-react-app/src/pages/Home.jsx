@@ -3,7 +3,6 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
 import coverImg from '../assets/images/coverhomepage.png';
 import facilityImg1 from '../assets/images/beach1.png';
 import facilityImg2 from '../assets/images/beach2.png';
@@ -19,7 +18,7 @@ try {
   console.log('Hero video not found, using fallback image');
   heroVideo = null;
 }
-const API_URL = process.env.API_URL;
+const API_URL = process.env.REACT_APP_API_URL;
 export default function Home({ roomTypes, setRoomTypes }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 

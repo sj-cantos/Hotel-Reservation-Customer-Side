@@ -44,7 +44,7 @@ export default function Form({ arriveDate, departDate, guests, selectedRoom, tot
     
     return errors;
   };
-  const API_URL = process.env.API_URL;
+  const API_URL = process.env.REACT_APP_API_URL;
   // Enhanced form submission
   const submitBookingForm = e => {
     e.preventDefault();

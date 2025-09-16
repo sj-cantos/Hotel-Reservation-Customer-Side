@@ -9,7 +9,7 @@ const USD = new Intl.NumberFormat('en-US', {
   currency: 'USD',
   minimumFractionDigits: 0,
 });
-  const API_URL = process.env.API_URL;
+  const API_URL = process.env.REACT_APP_API_URL;
 export default function RoomCollection({ guests, roomTypes, setRoomTypes, setSelectedRoom }) {
   const [textFilter, setTextFilter] = React.useState('');
   const [reloadMsg, setReloadMsg] = React.useState('Failed to load rooms');
